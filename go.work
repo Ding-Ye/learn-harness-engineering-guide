@@ -17,3 +17,13 @@ use ./agents/s07-error-retry
 use ./agents/s08-skill-system
 
 use ./agents/s09-context-compression
+
+use ./agents/s10-session-event-log
+
+use ./agents/s11-checkpoint-resume
+
+use ./agents/s12-sub-agent
+
+use ./agents/s13-cron-scheduler
+
+use ./agents/s14-classifier-permissions

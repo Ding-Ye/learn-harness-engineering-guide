@@ -35,11 +35,11 @@ The first chapter (s01) lands on day one with the agentic loop. Subsequent chapt
 | s07 | [Error + retry](docs/en/s07-error-retry.md) | Classify + exponential backoff | ✅ |
 | s08 | [Skill system](docs/en/s08-skill-system.md) | On-demand tool bundles | ✅ |
 | s09 | [Context compression](docs/en/s09-context-compression.md) | Sliding window + summary | ✅ |
-| s10 | Session event log | JSONL append-only events | ⏳ |
-| s11 | Checkpoint resume | Atomic `.tmp` + rename | ⏳ |
-| s12 | Sub-agent | Process IPC via files | ⏳ |
-| s13 | Cron scheduler | 5-field cron, `NextRun`, `ShouldRun` | ⏳ |
-| s14 | Classifier permissions | Two-stage model-based gate | ⏳ |
+| s10 | [Session event log](docs/en/s10-session-event-log.md) | JSONL append-only events | ✅ |
+| s11 | [Checkpoint resume](docs/en/s11-checkpoint-resume.md) | Atomic `.tmp` + rename | ✅ |
+| s12 | [Sub-agent](docs/en/s12-sub-agent.md) | Process IPC via files | ✅ |
+| s13 | [Cron scheduler](docs/en/s13-cron-scheduler.md) | 5-field cron, `NextRun`, `ShouldRun` | ✅ |
+| s14 | [Classifier permissions](docs/en/s14-classifier-permissions.md) | Two-stage model-based gate | ✅ |
 | s_full | Integration | 16-step end-to-end trace | ⏳ |
 | A | Context anxiety | Long-running failure mode | ⏳ |
 | B | Upstream map | Reading order through 25 guides | ⏳ |

@@ -21,6 +21,11 @@ jobs:
           - s07-error-retry
           - s08-skill-system
           - s09-context-compression
+          - s10-session-event-log
+          - s11-checkpoint-resume
+          - s12-sub-agent
+          - s13-cron-scheduler
+          - s14-classifier-permissions
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
