@@ -31,10 +31,10 @@ The first chapter (s01) lands on day one with the agentic loop. Subsequent chapt
 | s03 | [Tool registry](docs/en/s03-tool-registry.md) | Schemas + dispatch | ✅ |
 | s04 | [Context assembler](docs/en/s04-context-assembler.md) | Priority packing, token budget | ✅ |
 | s05 | [Memory layer](docs/en/s05-memory-layer.md) | MEMORY.md + daily logs | ✅ |
-| s06 | Guardrails | Allow / deny / tiered approval | ⏳ |
-| s07 | Error + retry | Classify + exponential backoff | ⏳ |
-| s08 | Skill system | On-demand tool bundles | ⏳ |
-| s09 | Context compression | Sliding window + summary | ⏳ |
+| s06 | [Guardrails](docs/en/s06-guardrails.md) | Allow / deny / tiered approval | ✅ |
+| s07 | [Error + retry](docs/en/s07-error-retry.md) | Classify + exponential backoff | ✅ |
+| s08 | [Skill system](docs/en/s08-skill-system.md) | On-demand tool bundles | ✅ |
+| s09 | [Context compression](docs/en/s09-context-compression.md) | Sliding window + summary | ✅ |
 | s10 | Session event log | JSONL append-only events | ⏳ |
 | s11 | Checkpoint resume | Atomic `.tmp` + rename | ⏳ |
 | s12 | Sub-agent | Process IPC via files | ⏳ |

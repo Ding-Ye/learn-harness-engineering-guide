@@ -9,3 +9,11 @@ use ./agents/s03-tool-registry
 use ./agents/s04-context-assembler
 
 use ./agents/s05-memory-layer
+
+use ./agents/s06-guardrails
+
+use ./agents/s07-error-retry
+
+use ./agents/s08-skill-system
+
+use ./agents/s09-context-compression

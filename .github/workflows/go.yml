@@ -17,6 +17,10 @@ jobs:
           - s03-tool-registry
           - s04-context-assembler
           - s05-memory-layer
+          - s06-guardrails
+          - s07-error-retry
+          - s08-skill-system
+          - s09-context-compression
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
