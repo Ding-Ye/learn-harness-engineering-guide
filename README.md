@@ -40,9 +40,9 @@ The first chapter (s01) lands on day one with the agentic loop. Subsequent chapt
 | s12 | [Sub-agent](docs/en/s12-sub-agent.md) | Process IPC via files | ✅ |
 | s13 | [Cron scheduler](docs/en/s13-cron-scheduler.md) | 5-field cron, `NextRun`, `ShouldRun` | ✅ |
 | s14 | [Classifier permissions](docs/en/s14-classifier-permissions.md) | Two-stage model-based gate | ✅ |
-| s_full | Integration | 16-step end-to-end trace | ⏳ |
-| A | Context anxiety | Long-running failure mode | ⏳ |
-| B | Upstream map | Reading order through 25 guides | ⏳ |
+| s_full | [Integration](docs/en/s_full-integration.md) | 16-step end-to-end trace | ✅ |
+| A | [Context anxiety](docs/en/appendix-a-context-anxiety.md) | Long-running failure mode | ✅ |
+| B | [Upstream map](docs/en/appendix-b-upstream-map.md) | Reading order through 25 guides | ✅ |
 
 ### Quick start
 

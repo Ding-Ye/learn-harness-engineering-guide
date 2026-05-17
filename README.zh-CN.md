@@ -40,9 +40,9 @@
 | s12 | [子 agent](docs/zh/s12-sub-agent.md) | 进程级 IPC（文件） | ✅ |
 | s13 | [Cron 调度](docs/zh/s13-cron-scheduler.md) | 5 字段 cron、`NextRun`、`ShouldRun` | ✅ |
 | s14 | [分类器权限](docs/zh/s14-classifier-permissions.md) | 两阶段模型决策 | ✅ |
-| s_full | 集成 | 16 步端到端追踪 | ⏳ |
-| A | 上下文焦虑 | 长任务失败模式 | ⏳ |
-| B | 上游导读地图 | 25 篇 guide 的阅读次序 | ⏳ |
+| s_full | [集成](docs/zh/s_full-integration.md) | 16 步端到端追踪 | ✅ |
+| A | [上下文焦虑](docs/zh/appendix-a-context-anxiety.md) | 长任务失败模式 | ✅ |
+| B | [上游导读地图](docs/zh/appendix-b-upstream-map.md) | 25 篇 guide 的阅读次序 | ✅ |
 
 ### 快速开始
 
