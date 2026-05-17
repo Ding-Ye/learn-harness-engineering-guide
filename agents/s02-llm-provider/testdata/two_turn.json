@@ -1,0 +1,15 @@
+[
+  {
+    "Content": [
+      {"type": "text", "text": "Let me echo that for you."},
+      {"type": "tool_use", "id": "call_1", "name": "echo", "input": {"text": "hello s02"}}
+    ],
+    "StopReason": "tool_use"
+  },
+  {
+    "Content": [
+      {"type": "text", "text": "Done. The echo tool returned \"echo: hello s02\"."}
+    ],
+    "StopReason": "end_turn"
+  }
+]

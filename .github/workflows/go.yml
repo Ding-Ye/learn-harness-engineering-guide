@@ -13,6 +13,10 @@ jobs:
       matrix:
         session:
           - s01-minimum-loop
+          - s02-llm-provider
+          - s03-tool-registry
+          - s04-context-assembler
+          - s05-memory-layer
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5

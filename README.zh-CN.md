@@ -27,10 +27,10 @@
 | # | 章节 | 机制 | 状态 |
 |---|------|------|:----:|
 | s01 | [最小循环](docs/zh/s01-minimum-loop.md) | think → act → observe | ✅ |
-| s02 | LLM Provider | Anthropic / mock 同一接口 | ⏳ |
-| s03 | 工具注册 | Schema + 分发 | ⏳ |
-| s04 | 上下文装配 | 优先级打包 + token 预算 | ⏳ |
-| s05 | 记忆层 | MEMORY.md + 每日 log | ⏳ |
+| s02 | [LLM Provider](docs/zh/s02-llm-provider.md) | Anthropic / mock 同一接口 | ✅ |
+| s03 | [工具注册](docs/zh/s03-tool-registry.md) | Schema + 分发 | ✅ |
+| s04 | [上下文装配](docs/zh/s04-context-assembler.md) | 优先级打包 + token 预算 | ✅ |
+| s05 | [记忆层](docs/zh/s05-memory-layer.md) | MEMORY.md + 每日 log | ✅ |
 | s06 | 护栏 | 白/黑名单 + 分级审批 | ⏳ |
 | s07 | 错误与重试 | 分类 + 指数退避 | ⏳ |
 | s08 | Skill 系统 | 按需加载的工具 bundle | ⏳ |

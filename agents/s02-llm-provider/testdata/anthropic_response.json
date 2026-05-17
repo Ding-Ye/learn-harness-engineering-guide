@@ -1,0 +1,24 @@
+{
+  "id": "msg_01ABC",
+  "type": "message",
+  "role": "assistant",
+  "model": "claude-sonnet-4-20250514",
+  "content": [
+    {
+      "type": "text",
+      "text": "I'll echo that for you."
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01XYZ",
+      "name": "echo",
+      "input": {"text": "from anthropic"}
+    }
+  ],
+  "stop_reason": "tool_use",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 42,
+    "output_tokens": 17
+  }
+}

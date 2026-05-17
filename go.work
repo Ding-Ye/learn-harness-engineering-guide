@@ -1,3 +1,11 @@
 go 1.21
 
 use ./agents/s01-minimum-loop
+
+use ./agents/s02-llm-provider
+
+use ./agents/s03-tool-registry
+
+use ./agents/s04-context-assembler
+
+use ./agents/s05-memory-layer

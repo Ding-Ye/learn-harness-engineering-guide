@@ -27,10 +27,10 @@ The first chapter (s01) lands on day one with the agentic loop. Subsequent chapt
 | # | Chapter | Mechanism | Status |
 |---|---------|-----------|:------:|
 | s01 | [Minimum loop](docs/en/s01-minimum-loop.md) | think → act → observe | ✅ |
-| s02 | LLM provider | Anthropic / mock behind one interface | ⏳ |
-| s03 | Tool registry | Schemas + dispatch | ⏳ |
-| s04 | Context assembler | Priority packing, token budget | ⏳ |
-| s05 | Memory layer | MEMORY.md + daily logs | ⏳ |
+| s02 | [LLM provider](docs/en/s02-llm-provider.md) | Anthropic / mock behind one interface | ✅ |
+| s03 | [Tool registry](docs/en/s03-tool-registry.md) | Schemas + dispatch | ✅ |
+| s04 | [Context assembler](docs/en/s04-context-assembler.md) | Priority packing, token budget | ✅ |
+| s05 | [Memory layer](docs/en/s05-memory-layer.md) | MEMORY.md + daily logs | ✅ |
 | s06 | Guardrails | Allow / deny / tiered approval | ⏳ |
 | s07 | Error + retry | Classify + exponential backoff | ⏳ |
 | s08 | Skill system | On-demand tool bundles | ⏳ |
