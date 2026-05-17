@@ -59,6 +59,25 @@ go run . "hello world"
 
 No API key is required for s01: a `MockProvider` returns scripted responses so the loop is exercised offline. s02+ introduce a real `Provider` interface, but tests `t.Skip()` when `ANTHROPIC_API_KEY` is unset.
 
+### Multi-model support (DeepSeek / Qwen / Moonshot / self-hosted …)
+
+The Anthropic-shaped `Provider` interface from s02 plugs into ANY OpenAI-compatible endpoint via the bundled translation layer:
+
+```bash
+cd agents/s02-llm-provider
+
+export DEEPSEEK_API_KEY=sk-...
+go run . -provider deepseek "..."
+
+export DASHSCOPE_API_KEY=sk-...
+go run . -provider qwen "..."
+
+# Self-hosted vLLM / SGLang
+go run . -provider local -model your-model "..."
+```
+
+8 profiles ship out of the box. See [Multi-model integration](docs/en/multi-model.md).
+
 ### How to read this repo
 
 1. Start with [`docs/en/s01-minimum-loop.md`](docs/en/s01-minimum-loop.md) — it explains the central abstraction (the agentic loop) in 6 sections, ending with annotated upstream source.

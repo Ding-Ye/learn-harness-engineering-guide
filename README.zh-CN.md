@@ -59,6 +59,25 @@ go run . "hello world"
 
 s01 不需要 API key —— `MockProvider` 返回脚本化响应，离线就能跑。s02 之后引入真实 `Provider` 接口，但测试在 `ANTHROPIC_API_KEY` 未设置时 `t.Skip()`，CI 仍然全绿。
 
+### 多模型支持（DeepSeek / Qwen / Moonshot / 自建 …）
+
+s02 的 Anthropic-shape `Provider` 接口通过自带的翻译层接入**任意** OpenAI 兼容端点：
+
+```bash
+cd agents/s02-llm-provider
+
+export DEEPSEEK_API_KEY=sk-...
+go run . -provider deepseek "..."
+
+export DASHSCOPE_API_KEY=sk-...
+go run . -provider qwen "..."
+
+# 自建 vLLM / SGLang
+go run . -provider local -model your-model "..."
+```
+
+开箱即用 8 个 profile。详见 [多模型接入](docs/zh/multi-model.md)。
+
 ### 怎么读这个仓库
 
 1. 从 [`docs/zh/s01-minimum-loop.md`](docs/zh/s01-minimum-loop.md) 开始 —— 它用 6 段式讲清楚 agentic loop 这个核心抽象，最后给出注释版上游源码。
