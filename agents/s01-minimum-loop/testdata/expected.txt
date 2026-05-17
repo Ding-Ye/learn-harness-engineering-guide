@@ -1,0 +1,8 @@
+$ go run ./agents/s01-minimum-loop "say hi"
+I ran the echo tool on "say hi". Task complete.
+
+# What just happened (annotated):
+#   turn 0: provider returns StopReason="tool_use" + ToolCalls=[{echo "say hi"}]
+#           → loop dispatches EchoTool.Run, appends {Role:"tool", Content:"echo: say hi"}
+#   turn 1: provider returns StopReason="end_turn" + Content="I ran the echo tool on \"say hi\"..."
+#           → loop returns final text to main()

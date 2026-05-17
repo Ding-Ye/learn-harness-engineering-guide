@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>learn-harness-engineering-guide · curriculum</title>
+<style>
+  :root { --bg:#0d0e10; --fg:#e7e7ea; --muted:#7d8290; --link:#5fb0ff; --ok:#5fe09d; --pending:#c98a4b; --card:#15171b; --border:#22252c; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+         margin:0; padding:0; background:var(--bg); color:var(--fg); line-height:1.6; }
+  .container { max-width: 880px; margin: 0 auto; padding: 48px 24px; }
+  h1 { font-size: 2.1rem; margin: 0 0 8px; }
+  h2 { font-size: 1.3rem; margin: 36px 0 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  p { color: var(--fg); }
+  .sub { color: var(--muted); margin-top: 0; }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .lang { float: right; font-size: 0.9rem; color: var(--muted); }
+  .lang a { margin-left: 12px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; background: var(--card);
+          border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { background: #1c1f25; font-weight: 600; font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  tr:last-child td { border-bottom: none; }
+  .num { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--muted); width: 70px; }
+  .badge { display:inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; }
+  .badge.ok { background: rgba(95, 224, 157, 0.12); color: var(--ok); }
+  .badge.pending { background: rgba(201, 138, 75, 0.12); color: var(--pending); }
+  .meta { color: var(--muted); font-size: 0.9rem; }
+  .ascii { background:#0a0b0d; padding: 16px; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85rem; overflow-x: auto; border: 1px solid var(--border); }
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="lang"><a href="#en">EN</a><a href="#zh">中</a></div>
+
+  <h1>learn-harness-engineering-guide</h1>
+  <p class="sub">Re-implementing the Nexu <a href="https://github.com/nexu-io/harness-engineering-guide">Harness Engineering Guide</a> in working Go, 14 chapters at a time.</p>
+
+  <h2 id="en">What this repo is</h2>
+  <p>The upstream <em>Harness Engineering Guide</em> is 13K lines of markdown that describes how to build an AI agent harness — agentic loop, tool registry, memory tiers, guardrails, sub-agents, classifier permissions, the works. This repo turns the prose into 14 progressive Go chapters, each ~150-700 LOC, each with tests, each pinned to specific upstream lines.</p>
+
+  <div class="ascii">
+agentic loop  →  tool registry  →  memory  →  guardrails  →  retry  →  skills
+     │                                                                    │
+     └─►  context compression  →  event log  →  checkpoint  →  sub-agent  ┘
+                                                                          │
+                                            cron scheduler  →  classifier permissions
+  </div>
+
+  <h2>Curriculum</h2>
+  <table>
+    <thead><tr><th class="num">#</th><th>Chapter</th><th>Mechanism</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td class="num">s01</td><td><a href="https://github.com/Ding-Ye/learn-harness-engineering-guide/blob/main/docs/en/s01-minimum-loop.md">Minimum loop</a></td><td>think→act→observe</td><td><span class="badge ok">ready</span></td></tr>
+      <tr><td class="num">s02</td><td>LLM provider</td><td>Anthropic / mock behind one interface</td><td><span class="badge pending">pending</span></td></tr>
+      <tr><td class="num">s03</td><td>Tool registry</td><td>Schemas + dispatch</td><td><span class="badge pending">pending</span></td></tr>
+      <tr><td class="num">s04</td><td>Context assembler</td><td>Priority packing, token budget</td><td><span class="badge pending">pending</span></td></tr>
+      <tr><td class="num">s05</td><td>Memory layer</td><td>MEMORY.md + daily logs</td><td><span class="badge pending">pending</span></td></tr>
+      <tr><td class="num">s06</td><td>Guardrails</td><td>Allow / deny / tiered approval</td><td><span class="badge pending">pending</span></td></tr>
+      <tr><td class="num">s07</td><td>Error + retry</td><td>Classify + exponential backoff</td><td><span class="badge pending">pending</span></td></tr>
+      <tr><td class="num">s08</td><td>Skill system</td><td>On-demand tool bundles</td><td><span class="badge pending">pending</span></td></tr>
+      <tr><td class="num">s09</td><td>Context compression</td><td>Sliding window + summary</td><td><span class="badge pending">pending</span></td></tr>
+      <tr><td class="num">s10</td><td>Session event log</td><td>JSONL append-only events</td><td><span class="badge pending">pending</span></td></tr>
+      <tr><td class="num">s11</td><td>Checkpoint resume</td><td>Atomic .tmp + rename</td><td><span class="badge pending">pending</span></td></tr>
+      <tr><td class="num">s12</td><td>Sub-agent</td><td>Process IPC via files</td><td><span class="badge pending">pending</span></td></tr>
+      <tr><td class="num">s13</td><td>Cron scheduler</td><td>5-field cron, NextRun, ShouldRun</td><td><span class="badge pending">pending</span></td></tr>
+      <tr><td class="num">s14</td><td>Classifier permissions</td><td>Two-stage model-based gate</td><td><span class="badge pending">pending</span></td></tr>
+      <tr><td class="num">s_full</td><td>Integration</td><td>16-step end-to-end trace</td><td><span class="badge pending">pending</span></td></tr>
+      <tr><td class="num">A</td><td>Context anxiety</td><td>Long-running failure mode</td><td><span class="badge pending">pending</span></td></tr>
+      <tr><td class="num">B</td><td>Upstream map</td><td>Reading order through 25 guides</td><td><span class="badge pending">pending</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Quick start</h2>
+  <p>Clone the repo, run s01, look at the loop:</p>
+  <div class="ascii">
+git clone https://github.com/Ding-Ye/learn-harness-engineering-guide.git
+cd learn-harness-engineering-guide/agents/s01-minimum-loop
+go test -count=1 ./...
+go run . "hello world"
+# I ran the echo tool on "hello world". Task complete.
+  </div>
+
+  <hr style="border:none;border-top:1px solid var(--border);margin:48px 0;">
+
+  <h2 id="zh">中文版</h2>
+  <p>上游 <em>Harness Engineering Guide</em> 用 13K 行 markdown 讲清楚怎么构建一个 AI agent harness —— agentic loop、工具注册、记忆分层、护栏、子 agent、分类器权限，应有尽有。本仓库把这些概念翻译成 14 章渐进式 Go 实现，每章 ~150-700 行，每章配测试，每章引用对应上游行号。</p>
+
+  <h2>章节</h2>
+  <table>
+    <thead><tr><th class="num">#</th><th>章节</th><th>机制</th><th>状态</th></tr></thead>
+    <tbody>
+      <tr><td class="num">s01</td><td><a href="https://github.com/Ding-Ye/learn-harness-engineering-guide/blob/main/docs/zh/s01-minimum-loop.md">最小循环</a></td><td>think→act→observe</td><td><span class="badge ok">已上线</span></td></tr>
+      <tr><td class="num">s02</td><td>LLM Provider</td><td>Anthropic / mock 同一接口</td><td><span class="badge pending">待发布</span></td></tr>
+      <tr><td class="num">s03</td><td>工具注册</td><td>Schema + 分发</td><td><span class="badge pending">待发布</span></td></tr>
+      <tr><td class="num">s04</td><td>上下文装配</td><td>优先级打包 + token 预算</td><td><span class="badge pending">待发布</span></td></tr>
+      <tr><td class="num">s05</td><td>记忆层</td><td>MEMORY.md + 每日 log</td><td><span class="badge pending">待发布</span></td></tr>
+      <tr><td class="num">s06</td><td>护栏</td><td>白/黑名单 + 分级审批</td><td><span class="badge pending">待发布</span></td></tr>
+      <tr><td class="num">s07</td><td>错误与重试</td><td>分类 + 指数退避</td><td><span class="badge pending">待发布</span></td></tr>
+      <tr><td class="num">s08</td><td>Skill 系统</td><td>按需加载的工具 bundle</td><td><span class="badge pending">待发布</span></td></tr>
+      <tr><td class="num">s09</td><td>上下文压缩</td><td>滑动窗口 + 摘要</td><td><span class="badge pending">待发布</span></td></tr>
+      <tr><td class="num">s10</td><td>Session 事件日志</td><td>JSONL append-only</td><td><span class="badge pending">待发布</span></td></tr>
+      <tr><td class="num">s11</td><td>Checkpoint 恢复</td><td>原子 .tmp + rename</td><td><span class="badge pending">待发布</span></td></tr>
+      <tr><td class="num">s12</td><td>子 agent</td><td>进程级 IPC（文件）</td><td><span class="badge pending">待发布</span></td></tr>
+      <tr><td class="num">s13</td><td>Cron 调度</td><td>5 字段 cron、NextRun、ShouldRun</td><td><span class="badge pending">待发布</span></td></tr>
+      <tr><td class="num">s14</td><td>分类器权限</td><td>两阶段模型决策</td><td><span class="badge pending">待发布</span></td></tr>
+      <tr><td class="num">s_full</td><td>集成</td><td>16 步端到端追踪</td><td><span class="badge pending">待发布</span></td></tr>
+      <tr><td class="num">A</td><td>上下文焦虑</td><td>长任务失败模式</td><td><span class="badge pending">待发布</span></td></tr>
+      <tr><td class="num">B</td><td>上游导读地图</td><td>25 篇 guide 的阅读次序</td><td><span class="badge pending">待发布</span></td></tr>
+    </tbody>
+  </table>
+
+  <footer>
+  <p>Upstream: <a href="https://github.com/nexu-io/harness-engineering-guide">nexu-io/harness-engineering-guide</a> (MIT)
+  · This repo: <a href="https://github.com/Ding-Ye/learn-harness-engineering-guide">Ding-Ye/learn-harness-engineering-guide</a> (MIT)
+  · Generated with <a href="https://github.com/anthropics/claude-code">Claude Code</a>.</p>
+  </footer>
+</div>
+</body>
+</html>

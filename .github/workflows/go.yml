@@ -1,0 +1,35 @@
+name: go
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        session:
+          - s01-minimum-loop
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.21"
+          cache-dependency-path: agents/${{ matrix.session }}/go.sum
+      - name: vet
+        run: go vet ./...
+        working-directory: agents/${{ matrix.session }}
+      - name: build
+        run: go build ./...
+        working-directory: agents/${{ matrix.session }}
+      - name: test
+        run: |
+          if find . -name '*_test.go' -print -quit | grep -q .; then
+            go test -count=1 ./...
+          else
+            echo "no tests yet for ${{ matrix.session }}"
+          fi
+        working-directory: agents/${{ matrix.session }}

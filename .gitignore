@@ -1,0 +1,30 @@
+# learn-repo-generator workdir (must never be committed)
+.learn/
+
+# Go
+*.test
+*.out
+coverage.html
+
+# Built binaries (no extension) inside chapter modules
+agents/*/s01-minimum-loop
+agents/*/s02-llm-provider
+agents/*/s03-tool-registry
+agents/*/s04-context-assembler
+agents/*/s05-memory-layer
+agents/*/s06-guardrails
+agents/*/s07-error-retry
+agents/*/s08-skill-system
+agents/*/s09-context-compression
+agents/*/s10-session-event-log
+agents/*/s11-checkpoint-resume
+agents/*/s12-sub-agent
+agents/*/s13-cron-scheduler
+agents/*/s14-classifier-permissions
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
